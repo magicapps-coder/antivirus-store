@@ -67,7 +67,9 @@ Analytics and crash reporting are disabled in development builds.
 The App connects to the internet only to:
 
 1. **Download database updates** (malware signatures, the list of dangerous sites and links, the list of known safe
-   apps) from our GitHub repository (`github.com/magicapps-coder/antivirus-db`, `raw.githubusercontent.com`).
+   apps) from our GitHub repository (`github.com/magicapps-coder/antivirus-db`, `raw.githubusercontent.com`) and, if
+   that is unavailable, signature databases from a public upstream mirror on GitHub Pages (`github.io`), whose files
+   are checked with a digital signature before use.
 2. **Download tracker signatures** from Exodus Privacy (`reports.exodus-privacy.eu.org`) about once a week.
 3. **Fetch configuration** (update intervals, database locations) from Firebase Remote Config.
 4. **Ask Google Play Protect** for its status and list of harmful apps through Google Play services on your device
